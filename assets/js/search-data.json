@@ -2,7 +2,7 @@
   
     
         "post0": {
-            "title": "First Markdown Post",
+            "title": "Soccer quiz",
             "content": "the_total_score = 0 x = input(&quot;What happens when you get fouled inside the 18-yard box?&quot;) if x == &quot;Penalty Kick&quot;: print(&quot;Yes, you got it correct!&quot;) the_total_score += 1 else: print(&quot;Sorry you did not get it correct&quot;) x = input(&quot;How many yellow cards does it take to get a red card&quot;) if x == &quot;two&quot; or x == &quot;2&quot; or x == &quot;Two&quot;: print(&quot;that is correct&quot;) the_total_score +=1 else: print(&quot;sorry that is incorrect&quot;) x = input(&quot;How many players are on at one time on each team?&quot;) if x==&quot;11 players&quot;: print(&quot;That is correct&quot;) the_total_score += 1 else: print(&quot;That is not correct&quot;) x= input(&quot;Who is the best soccer player to ever play the game&quot;) if x== &quot;Messi&quot; or x== &quot;Lionel Messi&quot;: print(&quot;That is correct&quot;) the_total_score += 1 else: print(&quot;That is incorrect&quot;) print(str(the_total_score) + &quot;/4&quot;) . Yes, you got it correct! that is correct That is correct That is correct 4/4 .",
             "url": "https://vyaang22.github.io/Blog/_notebooks/firstpython",
             "relUrl": "/_notebooks/firstpython",
