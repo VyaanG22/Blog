@@ -13,8 +13,8 @@ tags: [html, liquid, javascript]
 <!-- Hack 3: do your own thing -->
 
 
-{% assign BITS = 8 %}
-
+{% assign BITS = 24 %}
+<FONT COLOR="#ff0000">
 <div class="container bg-primary">
     <header class="pb-3 mb-4 border-bottom border-primary text-dark">
         <span class="fs-4">Binary Math with Conversions</span>
