@@ -160,28 +160,16 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">num</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"How many goals did you score in last weeks game?"</span><span class="p">)</span> 
-<span class="k">def</span> <span class="nf">DecimalToBinary</span><span class="p">(</span><span class="n">num</span><span class="p">):</span>
-    <span class="n">strs</span> <span class="o">=</span> <span class="s2">""</span>
-    <span class="k">while</span> <span class="n">num</span><span class="p">:</span>
-        <span class="c1"># if (num &amp; 1) = 1</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">num</span> <span class="o">&amp;</span> <span class="mi">1</span><span class="p">):</span>
-            <span class="n">strs</span> <span class="o">+=</span> <span class="s2">"1"</span>
-        <span class="c1"># if (num &amp; 1) = 0</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="n">strs</span> <span class="o">+=</span> <span class="s2">"0"</span>
-        <span class="c1"># right shift by 1</span>
-        <span class="n">num</span> <span class="o">&gt;&gt;=</span> <span class="mi">1</span>
-    <span class="k">return</span> <span class="n">strs</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">DecimalToBinary</span><span class="p">(</span><span class="n">number</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">number</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">DecimalToBinary</span><span class="p">(</span><span class="n">number</span><span class="o">//</span><span class="mi">2</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">number</span><span class="o">%</span><span class="k">2</span>, end = "")
  
 <span class="c1"># function to reverse the string</span>
-<span class="k">def</span> <span class="nf">reverse</span><span class="p">(</span><span class="n">strs</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">strs</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
- 
+<span class="n">number</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span> 
+<span class="nb">print</span><span class="p">(</span><span class="s2">"The binary for"</span><span class="p">,</span> <span class="n">number</span><span class="p">,</span> <span class="s2">"is: "</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="s2">""</span><span class="p">)</span>
+<span class="n">DecimalToBinary</span><span class="p">(</span><span class="n">number</span><span class="p">)</span>
 <span class="c1"># Driver Code</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Binary of num 67 is:"</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">" "</span><span class="p">)</span>
-<span class="n">reverse</span><span class="p">(</span><span class="n">DecimalToBinary</span><span class="p">(</span><span class="n">num</span><span class="p">))</span>
 </pre></div>
 
     </div>
@@ -194,31 +182,7 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Binary of num 67 is: </pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">TypeError</span>                                 Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[5], line 22</span>
-<span class="ansi-green-intense-fg ansi-bold">     19</span> <span style="color: rgb(95,135,135)"># Driver Code</span>
-<span class="ansi-green-intense-fg ansi-bold">     21</span> <span style="color: rgb(0,135,0)">print</span>(<span style="color: rgb(175,0,0)">"</span><span style="color: rgb(175,0,0)">Binary of num 67 is:</span><span style="color: rgb(175,0,0)">"</span>, end<span style="color: rgb(98,98,98)">=</span><span style="color: rgb(175,0,0)">"</span><span style="color: rgb(175,0,0)"> </span><span style="color: rgb(175,0,0)">"</span>)
-<span class="ansi-green-fg">---&gt; 22</span> reverse(<span class="ansi-yellow-bg">DecimalToBinary</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">num</span><span class="ansi-yellow-bg">)</span>)
-
-Cell <span class="ansi-green-fg">In[5], line 6</span>, in <span class="ansi-cyan-fg">DecimalToBinary</span><span class="ansi-blue-fg">(num)</span>
-<span class="ansi-green-intense-fg ansi-bold">      3</span> strs <span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(175,0,0)">"</span><span style="color: rgb(175,0,0)">"</span>
-<span class="ansi-green-intense-fg ansi-bold">      4</span> <span class="ansi-bold" style="color: rgb(0,135,0)">while</span> num:
-<span class="ansi-green-intense-fg ansi-bold">      5</span>     <span style="color: rgb(95,135,135)"># if (num &amp; 1) = 1</span>
-<span class="ansi-green-fg">----&gt; 6</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> (<span class="ansi-yellow-bg">num</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">&amp;</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">1</span>):
-<span class="ansi-green-intense-fg ansi-bold">      7</span>         strs <span style="color: rgb(98,98,98)">+</span><span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(175,0,0)">"</span><span style="color: rgb(175,0,0)">1</span><span style="color: rgb(175,0,0)">"</span>
-<span class="ansi-green-intense-fg ansi-bold">      8</span>     <span style="color: rgb(95,135,135)"># if (num &amp; 1) = 0</span>
-<span class="ansi-green-intense-fg ansi-bold">      9</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">else</span>:
-
-<span class="ansi-red-fg">TypeError</span>: unsupported operand type(s) for &amp;: 'str' and 'int'</pre>
+<pre>The binary for 30 is: 11110</pre>
 </div>
 </div>
 
