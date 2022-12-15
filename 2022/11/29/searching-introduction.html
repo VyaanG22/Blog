@@ -283,9 +283,24 @@ window.onload = wrap_img;
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>length of list:  100
-Index:  99
-Execution time: 0.05602836608886719 ms
 </pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In [2], line 4</span>
+<span class="ansi-green-intense-fg ansi-bold">      2</span> <span style="color: rgb(0,135,0)">print</span>(<span style="color: rgb(175,0,0)">"</span><span style="color: rgb(175,0,0)">length of list: </span><span style="color: rgb(175,0,0)">"</span>, <span style="color: rgb(0,135,0)">len</span>(arr1))
+<span class="ansi-green-intense-fg ansi-bold">      3</span> s <span style="color: rgb(98,98,98)">=</span> time<span style="color: rgb(98,98,98)">.</span>time()
+<span class="ansi-green-fg">----&gt; 4</span> <span style="color: rgb(0,135,0)">print</span>(<span style="color: rgb(175,0,0)">"</span><span style="color: rgb(175,0,0)">Index: </span><span style="color: rgb(175,0,0)">"</span>, sequentialSearch(arr1,<span style="color: rgb(98,98,98)">99</span>))
+<span class="ansi-green-intense-fg ansi-bold">      5</span> e <span style="color: rgb(98,98,98)">=</span> time<span style="color: rgb(98,98,98)">.</span>time()
+<span class="ansi-green-intense-fg ansi-bold">      6</span> <span style="color: rgb(0,135,0)">print</span>(<span style="color: rgb(175,0,0)">'</span><span style="color: rgb(175,0,0)">Execution time:</span><span style="color: rgb(175,0,0)">'</span>, (e<span style="color: rgb(98,98,98)">-</span>s)<span style="color: rgb(98,98,98)">*</span><span style="color: rgb(98,98,98)">1000</span>, <span style="color: rgb(175,0,0)">'</span><span style="color: rgb(175,0,0)">ms</span><span style="color: rgb(175,0,0)">'</span>)
+
+<span class="ansi-red-fg">NameError</span>: name 'sequentialSearch' is not defined</pre>
 </div>
 </div>
 
@@ -755,14 +770,17 @@ Execution time: 0.06628036499023438 ms
 <span class="n">test_cases</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">85248289</span><span class="p">,</span><span class="mi">22297284</span><span class="p">,</span><span class="mi">18939904</span><span class="p">,</span><span class="mi">91107025</span><span class="p">,</span><span class="mi">69122596</span><span class="p">,</span><span class="mi">9721924</span><span class="p">,</span><span class="mi">37810201</span><span class="p">,</span><span class="mi">1893294144</span><span class="p">,</span><span class="mi">8722812816</span><span class="p">,</span><span class="mi">644398225</span><span class="p">]</span>
 <span class="n">answers</span> <span class="o">=</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">sq</span><span class="p">(</span><span class="n">x</span><span class="p">))</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">test_cases</span><span class="p">]</span>
 
-<span class="k">def</span> <span class="nf">checkValid</span><span class="p">():</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">test_cases</span><span class="p">)):</span>
+<span class="k">def</span> <span class="nf">checkValid</span><span class="p">():</span>                                  <span class="c1">#checkValid(), which iterates over each of the test cases and answers, </span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">test_cases</span><span class="p">)):</span>                <span class="c1">#and checks if the square root of the test case is equal to the corresponding answer.</span>
         <span class="k">if</span> <span class="n">sqrt</span><span class="p">(</span><span class="n">test_cases</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">==</span> <span class="n">answers</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span>
             <span class="nb">print</span><span class="p">(</span><span class="s2">"Check number </span><span class="si">{}</span><span class="s2"> passed"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="nb">print</span><span class="p">(</span><span class="s2">"Check number </span><span class="si">{}</span><span class="s2"> failed"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span>
 
 <span class="n">checkValid</span><span class="p">()</span>
+<span class="c1">#checkValid() function to run the tests and print out the results. </span>
+<span class="c1"># This code is essentially a simple unit test for the sqrt() function, </span>
+<span class="c1"># which verifies that it is working correctly for the given input values.</span>
 </pre></div>
 
     </div>
