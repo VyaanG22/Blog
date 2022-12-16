@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      2 min read
+      3 min read
     
 </span></p>
 
@@ -275,13 +275,6 @@ Fully programmed solution will improve your grade, at a minimum show that you tr
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>I managed to decrease the execution time to about 0.6</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="3.18-Undecidable-Problems">3.18 Undecidable Problems<a class="anchor-link" href="#3.18-Undecidable-Problems"> </a></h1>
 </div>
 </div>
@@ -289,7 +282,8 @@ Fully programmed solution will improve your grade, at a minimum show that you tr
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Notes">Notes<a class="anchor-link" href="#Notes"> </a></h2><ul>
-<li>_</li>
+<li>_The Halting Problem is essentially a paradox. Whenever a computer gets a paradoxical problem, it doesn't know when to stop trying to solve it.
+This is the reason why computers time out when a site will not load.</li>
 </ul>
 
 </div>
@@ -357,23 +351,83 @@ Fully programmed solution will improve your grade, at a minimum show that you tr
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">fastestroute</span><span class="p">(</span><span class="n">start</span><span class="p">,</span><span class="n">data</span><span class="p">):</span>
-    <span class="n">drivetime</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="n">order</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="c1">#CODE,CODE,CODE</span>
-    <span class="k">return</span><span class="p">(</span><span class="n">drivetime</span><span class="p">,</span><span class="n">order</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">answer</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">full</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Poway&#39;</span><span class="p">,</span> <span class="s1">&#39;Westview&#39;</span><span class="p">,</span> <span class="s1">&#39;MtCarmel&#39;</span><span class="p">,</span> <span class="s1">&#39;RanchoBernrdo&#39;</span><span class="p">]</span>
+<span class="n">debug</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">def</span> <span class="nf">find</span><span class="p">(</span><span class="n">question</span><span class="p">):</span>
+    <span class="k">global</span> <span class="n">answer</span>
+    <span class="k">global</span> <span class="n">debug</span>
+    <span class="n">dist</span> <span class="o">=</span> <span class="mi">1000</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">dataset</span><span class="p">[</span><span class="n">question</span><span class="p">]:</span>
+        <span class="n">temp</span> <span class="o">=</span> <span class="n">dataset</span><span class="p">[</span><span class="n">question</span><span class="p">][</span><span class="n">i</span><span class="p">]</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">temp</span> <span class="o">&lt;</span> <span class="n">dist</span><span class="p">):</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="ow">in</span> <span class="n">full</span><span class="p">):</span>
+                <span class="n">dist</span> <span class="o">=</span> <span class="n">temp</span>
+                <span class="n">place</span> <span class="o">=</span> <span class="n">i</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">continue</span>
+    <span class="n">answer</span> <span class="o">=</span> <span class="n">answer</span> <span class="o">+</span> <span class="n">dist</span>
+    <span class="n">full</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">place</span><span class="p">)</span>
+    <span class="n">debug</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">place</span><span class="p">)</span>
+    <span class="k">return</span><span class="p">(</span><span class="n">place</span><span class="p">)</span>
 
 <span class="n">start</span> <span class="o">=</span> <span class="s1">&#39;DelNorte&#39;</span>
-<span class="c1"># &#39;dataset&#39; is the name of the nested key value pair</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">):</span>
+    <span class="n">new</span> <span class="o">=</span> <span class="n">find</span><span class="p">(</span><span class="n">start</span><span class="p">)</span>
+    <span class="n">start</span> <span class="o">=</span> <span class="n">new</span>
+
+<span class="n">answer</span> <span class="o">=</span> <span class="n">answer</span> <span class="o">+</span> <span class="n">dataset</span><span class="p">[</span><span class="n">start</span><span class="p">][</span><span class="s1">&#39;DelNorte&#39;</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">answer</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">debug</span><span class="p">)</span>
 </pre></div>
 
     </div>
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">KeyError</span>                                  Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In [22], line 25</span>
+<span class="ansi-green-intense-fg ansi-bold">     22</span> start <span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(175,0,0)">DelNorte</span><span style="color: rgb(175,0,0)">&#39;</span>
+<span class="ansi-green-intense-fg ansi-bold">     24</span> <span class="ansi-bold" style="color: rgb(0,135,0)">for</span> i <span class="ansi-bold" style="color: rgb(175,0,255)">in</span> <span style="color: rgb(0,135,0)">range</span> (<span style="color: rgb(98,98,98)">0</span>, <span style="color: rgb(98,98,98)">4</span>):
+<span class="ansi-green-fg">---&gt; 25</span>     new <span style="color: rgb(98,98,98)">=</span> find(start)
+<span class="ansi-green-intense-fg ansi-bold">     26</span>     start <span style="color: rgb(98,98,98)">=</span> new
+<span class="ansi-green-intense-fg ansi-bold">     28</span> answer <span style="color: rgb(98,98,98)">=</span> answer <span style="color: rgb(98,98,98)">+</span> dataset[start][<span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(175,0,0)">DelNorte</span><span style="color: rgb(175,0,0)">&#39;</span>]
+
+Cell <span class="ansi-green-fg">In [22], line 9</span>, in <span class="ansi-cyan-fg">find</span><span class="ansi-blue-fg">(question)</span>
+<span class="ansi-green-intense-fg ansi-bold">      7</span> <span class="ansi-bold" style="color: rgb(0,135,0)">global</span> debug
+<span class="ansi-green-intense-fg ansi-bold">      8</span> dist <span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(98,98,98)">1000</span>
+<span class="ansi-green-fg">----&gt; 9</span> <span class="ansi-bold" style="color: rgb(0,135,0)">for</span> i <span class="ansi-bold" style="color: rgb(175,0,255)">in</span> <span class="ansi-yellow-bg">dataset</span><span class="ansi-yellow-bg">[</span><span class="ansi-yellow-bg">question</span><span class="ansi-yellow-bg">]</span>:
+<span class="ansi-green-intense-fg ansi-bold">     10</span>     temp <span style="color: rgb(98,98,98)">=</span> dataset[question][i]
+<span class="ansi-green-intense-fg ansi-bold">     11</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> (temp <span style="color: rgb(98,98,98)">&lt;</span> dist):
+
+<span class="ansi-red-fg">KeyError</span>: &#39;RanchoBernrdo&#39;</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>I attempted the homework couldn't find the reason why my code wouldn't work.</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Grading:">Grading:<a class="anchor-link" href="#Grading:"> </a></h3><table>
