@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      6 min read
+      12 min read
     
 </span></p>
 
@@ -138,15 +138,15 @@ window.onload = wrap_img;
 <h3 id="Hack-#1---Class-Notes">
 <a class="anchor" href="#Hack-#1---Class-Notes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hack #1 - Class Notes<a class="anchor-link" href="#Hack-#1---Class-Notes"> </a>
 </h3>
-<p>Write any extra notes you have here</p>
-<ul>
-<li>Simulations mimic the real world, things we cannot do in real life</li>
-<li>Reflect the changing state of a phenomenon</li>
-<li>Its impossible to factor eveyrthing into a simulation</li>
-<li>The importance of simulations is to have test cases</li>
-<li>Account for the imporance of the simiulation ideas</li>
-<li>Random gives random</li>
-</ul>
+<p>In this section, I take my own notes on the section. I have split it up into a vocabulary section and a section for miscellaneous class notes.</p>
+<p>Vocabulary
+Simulations: abstractions that mimic more complex objects or phenomena from the real world. (The purpose is drawing inferences without the contraints of the real world.)</p>
+<p>Variance: random chance, simulated through random number generation in simulations.</p>
+<p>Miscellaneous Class Notes
+Typically, simulations leave out specific details or simplify complex aspects. It is crucial, however, to have variables to represent variance in the situation.
+Simulations often contain some amount of bias.
+Variability and randomness exists inherently in the world, and we can represent this with random number generation.</p>
+<p>Here are some helpful functions for these simulations:</p>
 
 </div>
 </div>
@@ -175,7 +175,7 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>8
+<pre>6
 </pre>
 </div>
 </div>
@@ -189,9 +189,71 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p>I entered the numbers 4 and 8 and it found the number in between which is 6.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Why is this simulation considered an abstraction?</p>
+<p>It uses a conditional to execute one part of the code only when a particular condition is met.
+It uses a REPEAT loop to run the same block of code multiple times.
+It simplifies a real-world scenario into something that can be modeled in code and executed on a computer.
+It does not request input from the user or display output to the user.
+Explanation: The simulation is considered an abstraction because it is represented in separate terms (abstracted) into a computer language, but still made to function in its intended circumstances.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Hack-#2---Functions-Classwork">
 <a class="anchor" href="#Hack-#2---Functions-Classwork" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hack #2 - Functions Classwork<a class="anchor-link" href="#Hack-#2---Functions-Classwork"> </a>
 </h3>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>9
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Random coin flip</p>
+
 </div>
 </div>
 </div>
@@ -245,6 +307,56 @@ Tails
 </div>
     
 
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Please pick the lower bound of the RNG."</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"You picked"</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="s2">"."</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Please pick the upper bound of the RNG."</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"You picked"</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">y</span><span class="p">)</span> <span class="o">+</span> <span class="s2">"."</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Your random number is..."</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">))</span> <span class="o">+</span> <span class="s2">"."</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Please pick the lower bound of the RNG.
+You picked 11.
+Please pick the upper bound of the RNG.
+You picked 20.
+Your random number is... 18.
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Heres something that requires user input.</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -263,18 +375,60 @@ Tails
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
 
-<span class="k">def</span> <span class="nf">randomnum</span><span class="p">():</span> <span class="c1"># function for generating random int</span>
-    
+<span class="k">def</span> <span class="nf">generate_random_int</span><span class="p">():</span> <span class="c1"># function for generating random int</span>
+    <span class="k">return</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">)</span>
 
-<span class="k">def</span> <span class="nf">converttobin</span><span class="p">(</span><span class="n">n</span><span class="p">):</span> <span class="c1"># function for converting decimal to binary</span>
-    
+<span class="k">def</span> <span class="nf">convert_to_binary</span><span class="p">(</span><span class="n">decimal</span><span class="p">):</span> <span class="c1"># function for converting decimal to binary</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">7</span>
+    <span class="n">binary</span> <span class="o">=</span> <span class="s2">""</span>
+    <span class="k">while</span> <span class="n">i</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">decimal</span> <span class="o">%</span> <span class="p">(</span><span class="mi">2</span><span class="o">**</span><span class="n">i</span><span class="p">)</span> <span class="o">==</span> <span class="n">decimal</span><span class="p">:</span>
+            <span class="n">binary</span> <span class="o">+=</span> <span class="s2">"0"</span>
+            <span class="n">i</span> <span class="o">-=</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">binary</span> <span class="o">+=</span> <span class="s2">"1"</span>
+            <span class="n">decimal</span> <span class="o">-=</span> <span class="mi">2</span><span class="o">**</span><span class="n">i</span>
+            <span class="n">i</span> <span class="o">-=</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">binary</span>
 
-<span class="k">def</span> <span class="nf">survivors</span><span class="p">(</span><span class="n">binary</span><span class="p">):</span> <span class="c1"># function to assign position</span>
-    <span class="n">survivorstatus</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"Jiya"</span><span class="p">,</span> <span class="s2">"Shruthi"</span><span class="p">,</span> <span class="s2">"Noor"</span><span class="p">,</span> <span class="s2">"Ananya"</span> <span class="p">,</span> <span class="s2">"Peter Parker"</span><span class="p">,</span> <span class="s2">"Andrew Garfield"</span><span class="p">,</span> <span class="s2">"Tom Holland"</span><span class="p">,</span> <span class="s2">"Tobey Maguire"</span><span class="p">]</span>
-    <span class="c1"># replace the names above with your choice of people in the house</span>
+<span class="k">def</span> <span class="nf">determine_survivor_status</span><span class="p">(</span><span class="n">binary</span><span class="p">):</span> <span class="c1"># function to assign position</span>
+    <span class="n">survivors</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"Drew"</span><span class="p">,</span> <span class="s2">"Bob"</span><span class="p">,</span> <span class="s2">"Mark"</span><span class="p">,</span> <span class="s2">"Ashely"</span> <span class="p">,</span> <span class="s2">"Twig"</span><span class="p">,</span> <span class="s2">"Elfen Child"</span><span class="p">,</span> <span class="s2">"Jeffrey"</span><span class="p">,</span> <span class="s2">"Kid in Basement"</span><span class="p">]</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">survivors</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">binary</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="s2">"1"</span><span class="p">:</span>
+            <span class="n">temp</span> <span class="o">=</span> <span class="s2">"Zombie"</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">temp</span> <span class="o">=</span> <span class="s2">"Human"</span>
+        <span class="n">survivors</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">survivors</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">temp</span><span class="p">)</span>
+        <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">status</span> <span class="ow">in</span> <span class="n">survivors</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">name</span> <span class="o">+</span> <span class="s2">":"</span><span class="p">,</span> <span class="n">status</span><span class="p">)</span>
+
+<span class="n">determine_survivor_status</span><span class="p">(</span><span class="n">convert_to_binary</span><span class="p">(</span><span class="n">generate_random_int</span><span class="p">()))</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Drew: Zombie
+Bob: Zombie
+Mark: Human
+Ashely: Zombie
+Twig: Zombie
+Elfen Child: Human
+Jeffrey: Zombie
+Kid in Basement: Zombie
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -295,6 +449,55 @@ Tails
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>I changed the function name to roll_dice and the parameter to num_rolls. I also used a for loop to iterate over the number of rolls instead of a while loop. Additionally, I changed the print statement to print "Dice rolls: " and added a space after each roll when printing the rolls.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+
+<span class="k">def</span> <span class="nf">roll_dice</span><span class="p">(</span><span class="n">num_rolls</span><span class="p">):</span>
+    <span class="n">dice_rolls</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_rolls</span><span class="p">):</span>
+        <span class="n">dice_rolls</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">dice_rolls</span>
+
+<span class="n">rolls</span> <span class="o">=</span> <span class="n">roll_dice</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Dice rolls: "</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">''</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">roll</span> <span class="ow">in</span> <span class="n">rolls</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">roll</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">' '</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Dice rolls: 1 1 5 4 6 </pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -365,47 +568,58 @@ Tails
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">questions</span> <span class="o">=</span> <span class="mi">6</span>
-<span class="n">correct</span> <span class="o">=</span> <span class="mi">0</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
 
+<span class="c1"># New list of questions</span>
+<span class="n">questions</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">{</span>
+        <span class="s2">"q"</span><span class="p">:</span> <span class="s2">"1. How does a simulation differ from an experiment?"</span><span class="p">,</span>
+        <span class="s2">"a"</span><span class="p">:</span> <span class="s2">"a. A simulation is a theoretical representation of a real-world process, while an experiment is a practical test of a hypothesis.</span><span class="se">\n</span><span class="s2">b. A simulation is a practical test of a hypothesis, while an experiment is a theoretical representation of a real-world process.</span><span class="se">\n</span><span class="s2">c. A simulation and an experiment are the same thing.</span><span class="se">\n</span><span class="s2">d. A simulation is a representation of a real-world process that is more accurate than an experiment."</span><span class="p">,</span>
+        <span class="s2">"correct"</span><span class="p">:</span> <span class="s2">"a"</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="s2">"q"</span><span class="p">:</span> <span class="s2">"2. How is random variability accounted for in simulations?"</span><span class="p">,</span>
+        <span class="s2">"a"</span><span class="p">:</span> <span class="s2">"a. By using clear frontend visualizations of the scenario.</span><span class="se">\n</span><span class="s2">b. By connecting to an extensive API with historical data.</span><span class="se">\n</span><span class="s2">c. By using random or pseudo-random number generation.</span><span class="se">\n</span><span class="s2">d. By using inconsistent interpretation of concrete conditions."</span><span class="p">,</span>
+        <span class="s2">"correct"</span><span class="p">:</span> <span class="s2">"c"</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="s2">"q"</span><span class="p">:</span> <span class="s2">"3. Which of the following is an example of a simulation?"</span><span class="p">,</span>
+        <span class="s2">"a"</span><span class="p">:</span> <span class="s2">"a. A computer program that predicts the weather based on data from weather stations.</span><span class="se">\n</span><span class="s2">b. A scale model of a city used to test traffic flow.</span><span class="se">\n</span><span class="s2">c. A physical model of an airplane used to test its flight capabilities.</span><span class="se">\n</span><span class="s2">d. All of the above are examples of simulations."</span><span class="p">,</span>
+        <span class="s2">"correct"</span><span class="p">:</span> <span class="s2">"d"</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="s2">"q"</span><span class="p">:</span> <span class="s2">"4. What are some potential limitations of simulations?"</span><span class="p">,</span>
+        <span class="s2">"a"</span><span class="p">:</span> <span class="s2">"a. They may not be able to account for all variables and complexities of the real world.</span><span class="se">\n</span><span class="s2">b. They may be biased due to the assumptions and data used in the simulation.</span><span class="se">\n</span><span class="s2">c. They are always less accurate than real-world experiments.</span><span class="se">\n</span><span class="s2">d. All of the above are potential limitations of simulations."</span><span class="p">,</span>
+        <span class="s2">"correct"</span><span class="p">:</span> <span class="s2">"d"</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="s2">"q"</span><span class="p">:</span> <span class="s2">"5. How can simulations be used in decision-making?"</span><span class="p">,</span>
+        <span class="s2">"a"</span><span class="p">:</span> <span class="s2">"a. By providing a realistic representation of potential outcomes.</span><span class="se">\n</span><span class="s2">b. By allowing for the testing of different scenarios and scenarios that may not be practical or ethical to test in the real world.</span><span class="se">\n</span><span class="s2">c. By providing a way to draw inferences about real-world processes.</span><span class="se">\n</span><span class="s2">d. All of the above are ways in which simulations can be used in decision-making."</span><span class="p">,</span>
+        <span class="s2">"correct"</span><span class="p">:</span> <span class="s2">"d"</span>
+    <span class="p">}</span>
+<span class="p">]</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Question 1: What is the capital of France?"</span><span class="p">)</span>
-<span class="n">Q1</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
-<span class="k">if</span> <span class="n">Q1</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s2">"paris"</span><span class="p">:</span>
-    <span class="n">correct</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="n">validresponse</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"a"</span><span class="p">,</span> <span class="s2">"b"</span><span class="p">,</span> <span class="s2">"c"</span><span class="p">,</span> <span class="s2">"d"</span><span class="p">]</span>
+<span class="n">score</span> <span class="o">=</span> <span class="mi">0</span>
 
+<span class="c1"># Randomize the order of the questions</span>
+<span class="n">random</span><span class="o">.</span><span class="n">shuffle</span><span class="p">(</span><span class="n">questions</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Question 2: Who wrote the book 'Percy Jackson The Lightning Theif'?"</span><span class="p">)</span>
-<span class="n">Q2</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
-<span class="k">if</span> <span class="n">Q2</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s2">"Rick Riordan"</span><span class="p">:</span>
-    <span class="n">correct</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="c1"># Iterate through each question and ask for input</span>
+<span class="k">for</span> <span class="n">question</span> <span class="ow">in</span> <span class="n">questions</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">question</span><span class="p">[</span><span class="s2">"q"</span><span class="p">])</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">question</span><span class="p">[</span><span class="s2">"a"</span><span class="p">])</span>
+    <span class="n">user_response</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter the letter of your answer: "</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">user_response</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="n">question</span><span class="p">[</span><span class="s2">"correct"</span><span class="p">]:</span>
+        <span class="n">score</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Correct! Your score is now </span><span class="si">{}</span><span class="s2">."</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">score</span><span class="p">))</span>
+    <span class="k">elif</span> <span class="n">user_response</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">validresponse</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Invalid input. Please enter a letter from 'a' to 'd'."</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Incorrect. The correct answer is </span><span class="si">{}</span><span class="s2">. Your score is now </span><span class="si">{}</span><span class="s2">."</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">question</span><span class="p">[</span><span class="s2">"correct"</span><span class="p">],</span> <span class="n">score</span><span class="p">))</span>
 
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Question 3: What is the largest planet in the solar system?"</span><span class="p">)</span>
-<span class="n">Q3</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
-<span class="k">if</span> <span class="n">Q3</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s2">"jupiter"</span><span class="p">:</span>
-    <span class="n">correct</span> <span class="o">+=</span> <span class="mi">1</span>
-
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Question 4: What is the most populous city in the world?"</span><span class="p">)</span>
-<span class="n">Q4</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
-<span class="k">if</span> <span class="n">Q4</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s2">"tokyo"</span><span class="p">:</span>
-    <span class="n">correct</span> <span class="o">+=</span> <span class="mi">1</span>
-
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Question 5: Who invented the first practical electric light bulb?"</span><span class="p">)</span>
-<span class="n">Q5</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
-<span class="k">if</span> <span class="n">Q5</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s2">"thomas edison"</span><span class="p">:</span>
-    <span class="n">correct</span> <span class="o">+=</span> <span class="mi">1</span>
-
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Question 6: What is the highest mountain in the world?"</span><span class="p">)</span>
-<span class="n">Q6</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
-<span class="k">if</span> <span class="n">Q6</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s2">"mount everest"</span><span class="p">:</span>
-    <span class="n">correct</span> <span class="o">+=</span> <span class="mi">1</span>
-
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">"You scored "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">correct</span><span class="p">)</span> <span class="o">+</span> <span class="s2">"/"</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">questions</span><span class="p">)</span> <span class="o">+</span> <span class="s2">" correct answers."</span><span class="p">)</span>
+<span class="c1"># Print final score</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Your final"</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -418,7 +632,37 @@ Tails
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Question 1: What is the capital of France?
+<pre>2. How is random variability accounted for in simulations?
+a. By using clear frontend visualizations of the scenario.
+b. By connecting to an extensive API with historical data.
+c. By using random or pseudo-random number generation.
+d. By using inconsistent interpretation of concrete conditions.
+Incorrect. The correct answer is c. Your score is now 0.
+1. How does a simulation differ from an experiment?
+a. A simulation is a theoretical representation of a real-world process, while an experiment is a practical test of a hypothesis.
+b. A simulation is a practical test of a hypothesis, while an experiment is a theoretical representation of a real-world process.
+c. A simulation and an experiment are the same thing.
+d. A simulation is a representation of a real-world process that is more accurate than an experiment.
+Correct! Your score is now 1.
+5. How can simulations be used in decision-making?
+a. By providing a realistic representation of potential outcomes.
+b. By allowing for the testing of different scenarios and scenarios that may not be practical or ethical to test in the real world.
+c. By providing a way to draw inferences about real-world processes.
+d. All of the above are ways in which simulations can be used in decision-making.
+Incorrect. The correct answer is d. Your score is now 1.
+4. What are some potential limitations of simulations?
+a. They may not be able to account for all variables and complexities of the real world.
+b. They may be biased due to the assumptions and data used in the simulation.
+c. They are always less accurate than real-world experiments.
+d. All of the above are potential limitations of simulations.
+Correct! Your score is now 2.
+3. Which of the following is an example of a simulation?
+a. A computer program that predicts the weather based on data from weather stations.
+b. A scale model of a city used to test traffic flow.
+c. A physical model of an airplane used to test its flight capabilities.
+d. All of the above are examples of simulations.
+Correct! Your score is now 3.
+Your final
 </pre>
 </div>
 </div>
@@ -429,6 +673,14 @@ Tails
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The quiz iterates through each question in the list and presents it to the user. The user is asked to enter the letter of their answer, and their response is checked against the correct answer for that question. If the user's answer is correct, their score is incremented by 1. If their answer is incorrect, their score remains the same. If the user's input is not one of the valid response letters ('a', 'b', 'c', or 'd'), a message is displayed to the user indicating that their input was invalid.</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -455,40 +707,13 @@ Be creative! Think about instances in your own life, science, puzzles that can b
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">parent1_genotype</span> <span class="o">=</span> <span class="s2">"AABB"</span>
-<span class="n">parent2_genotype</span> <span class="o">=</span> <span class="s2">"aabb"</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
 
-<span class="c1"># define the function for predicting the genotype of the offspring</span>
-<span class="k">def</span> <span class="nf">predict_offspring_genotype</span><span class="p">(</span><span class="n">parent1</span><span class="p">,</span> <span class="n">parent2</span><span class="p">):</span>
-    <span class="c1"># combine the alleles from each parent</span>
-    <span class="n">alleles</span> <span class="o">=</span> <span class="s2">""</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">parent1</span><span class="p">)):</span>
-        <span class="n">alleles</span> <span class="o">+=</span> <span class="n">parent1</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">parent2</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-    <span class="k">return</span> <span class="n">alleles</span>
+<span class="n">days_of_week</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'Monday'</span><span class="p">,</span> <span class="s1">'Tuesday'</span><span class="p">,</span> <span class="s1">'Wednesday'</span><span class="p">,</span> <span class="s1">'Thursday'</span><span class="p">,</span> <span class="s1">'Friday'</span><span class="p">]</span>
 
-<span class="c1"># define the function for predicting the phenotype of the offspring</span>
-<span class="k">def</span> <span class="nf">predict_offspring_phenotype</span><span class="p">(</span><span class="n">genotype</span><span class="p">):</span>
-    <span class="c1"># convert the genotype to uppercase</span>
-    <span class="n">genotype</span> <span class="o">=</span> <span class="n">genotype</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
-    <span class="c1"># determine the phenotype based on the genotype</span>
-    <span class="k">if</span> <span class="n">genotype</span> <span class="o">==</span> <span class="s2">"AAAA"</span><span class="p">:</span>
-        <span class="k">return</span> <span class="s2">"tall"</span>
-    <span class="k">elif</span> <span class="n">genotype</span> <span class="o">==</span> <span class="s2">"AAAa"</span><span class="p">:</span>
-        <span class="k">return</span> <span class="s2">"medium"</span>
-    <span class="k">elif</span> <span class="n">genotype</span> <span class="o">==</span> <span class="s2">"AAaa"</span><span class="p">:</span>
-        <span class="k">return</span> <span class="s2">"short"</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">return</span> <span class="s2">"unknown"</span>
-
-<span class="c1"># predict the genotype of the offspring</span>
-<span class="n">offspring_genotype</span> <span class="o">=</span> <span class="n">predict_offspring_genotype</span><span class="p">(</span><span class="n">parent1_genotype</span><span class="p">,</span> <span class="n">parent2_genotype</span><span class="p">)</span>
-
-<span class="c1"># predict the phenotype of the offspring</span>
-<span class="n">offspring_phenotype</span> <span class="o">=</span> <span class="n">predict_offspring_phenotype</span><span class="p">(</span><span class="n">offspring_genotype</span><span class="p">)</span>
-
-<span class="c1"># print the results</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Offspring genotype: "</span> <span class="o">+</span> <span class="n">offspring_genotype</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Offspring phenotype: "</span> <span class="o">+</span> <span class="n">offspring_phenotype</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">day</span> <span class="ow">in</span> <span class="n">days_of_week</span><span class="p">:</span>
+    <span class="n">wake_up_time</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"7:</span><span class="si">{</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span><span class="si">}{</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">)</span><span class="si">}</span><span class="s2">am"</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Woke up </span><span class="si">{</span><span class="n">day</span><span class="si">}</span><span class="s2"> at </span><span class="si">{</span><span class="n">wake_up_time</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -501,8 +726,11 @@ Be creative! Think about instances in your own life, science, puzzles that can b
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Offspring genotype: AaAaBbBb
-Offspring phenotype: unknown
+<pre>Woke up Monday at 7:25am
+Woke up Tuesday at 7:12am
+Woke up Wednesday at 7:30am
+Woke up Thursday at 7:17am
+Woke up Friday at 7:23am
 </pre>
 </div>
 </div>
