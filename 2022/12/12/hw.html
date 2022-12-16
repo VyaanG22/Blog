@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      5 min read
+      6 min read
     
 </span></p>
 
@@ -369,26 +369,60 @@ Tails
 <span class="n">correct</span> <span class="o">=</span> <span class="mi">0</span>
 
 
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Question 1: What is the capital of France?"</span><span class="p">)</span>
 <span class="n">Q1</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
-<span class="k">if</span> <span class="n">Q1</span> <span class="o">==</span> <span class="p">:</span>
-    
+<span class="k">if</span> <span class="n">Q1</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s2">"paris"</span><span class="p">:</span>
+    <span class="n">correct</span> <span class="o">+=</span> <span class="mi">1</span>
 
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Question 2: Who wrote the book 'Percy Jackson The Lightning Theif'?"</span><span class="p">)</span>
 <span class="n">Q2</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
-<span class="k">if</span> <span class="n">Q2</span> <span class="o">==</span> <span class="p">:</span>
-   
+<span class="k">if</span> <span class="n">Q2</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s2">"Rick Riordan"</span><span class="p">:</span>
+    <span class="n">correct</span> <span class="o">+=</span> <span class="mi">1</span>
+
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Question 3: What is the largest planet in the solar system?"</span><span class="p">)</span>
 <span class="n">Q3</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
-<span class="k">if</span> <span class="n">Q3</span> <span class="o">==</span> <span class="p">:</span>
-   
+<span class="k">if</span> <span class="n">Q3</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s2">"jupiter"</span><span class="p">:</span>
+    <span class="n">correct</span> <span class="o">+=</span> <span class="mi">1</span>
 
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Question 4: What is the most populous city in the world?"</span><span class="p">)</span>
 <span class="n">Q4</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+<span class="k">if</span> <span class="n">Q4</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s2">"tokyo"</span><span class="p">:</span>
+    <span class="n">correct</span> <span class="o">+=</span> <span class="mi">1</span>
 
 
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Question 5: Who invented the first practical electric light bulb?"</span><span class="p">)</span>
+<span class="n">Q5</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+<span class="k">if</span> <span class="n">Q5</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s2">"thomas edison"</span><span class="p">:</span>
+    <span class="n">correct</span> <span class="o">+=</span> <span class="mi">1</span>
 
 
-<span class="nb">print</span><span class="p">(</span> <span class="s2">" you scored "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">correct</span><span class="p">)</span> <span class="o">+</span><span class="s2">"/"</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">questions</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Question 6: What is the highest mountain in the world?"</span><span class="p">)</span>
+<span class="n">Q6</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+<span class="k">if</span> <span class="n">Q6</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s2">"mount everest"</span><span class="p">:</span>
+    <span class="n">correct</span> <span class="o">+=</span> <span class="mi">1</span>
+
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"You scored "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">correct</span><span class="p">)</span> <span class="o">+</span> <span class="s2">"/"</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">questions</span><span class="p">)</span> <span class="o">+</span> <span class="s2">" correct answers."</span><span class="p">)</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Question 1: What is the capital of France?
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -414,6 +448,71 @@ Be creative! Think about instances in your own life, science, puzzles that can b
 </div>
 </div>
 </div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">parent1_genotype</span> <span class="o">=</span> <span class="s2">"AABB"</span>
+<span class="n">parent2_genotype</span> <span class="o">=</span> <span class="s2">"aabb"</span>
+
+<span class="c1"># define the function for predicting the genotype of the offspring</span>
+<span class="k">def</span> <span class="nf">predict_offspring_genotype</span><span class="p">(</span><span class="n">parent1</span><span class="p">,</span> <span class="n">parent2</span><span class="p">):</span>
+    <span class="c1"># combine the alleles from each parent</span>
+    <span class="n">alleles</span> <span class="o">=</span> <span class="s2">""</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">parent1</span><span class="p">)):</span>
+        <span class="n">alleles</span> <span class="o">+=</span> <span class="n">parent1</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">parent2</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">alleles</span>
+
+<span class="c1"># define the function for predicting the phenotype of the offspring</span>
+<span class="k">def</span> <span class="nf">predict_offspring_phenotype</span><span class="p">(</span><span class="n">genotype</span><span class="p">):</span>
+    <span class="c1"># convert the genotype to uppercase</span>
+    <span class="n">genotype</span> <span class="o">=</span> <span class="n">genotype</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+    <span class="c1"># determine the phenotype based on the genotype</span>
+    <span class="k">if</span> <span class="n">genotype</span> <span class="o">==</span> <span class="s2">"AAAA"</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">"tall"</span>
+    <span class="k">elif</span> <span class="n">genotype</span> <span class="o">==</span> <span class="s2">"AAAa"</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">"medium"</span>
+    <span class="k">elif</span> <span class="n">genotype</span> <span class="o">==</span> <span class="s2">"AAaa"</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">"short"</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">"unknown"</span>
+
+<span class="c1"># predict the genotype of the offspring</span>
+<span class="n">offspring_genotype</span> <span class="o">=</span> <span class="n">predict_offspring_genotype</span><span class="p">(</span><span class="n">parent1_genotype</span><span class="p">,</span> <span class="n">parent2_genotype</span><span class="p">)</span>
+
+<span class="c1"># predict the phenotype of the offspring</span>
+<span class="n">offspring_phenotype</span> <span class="o">=</span> <span class="n">predict_offspring_phenotype</span><span class="p">(</span><span class="n">offspring_genotype</span><span class="p">)</span>
+
+<span class="c1"># print the results</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Offspring genotype: "</span> <span class="o">+</span> <span class="n">offspring_genotype</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Offspring phenotype: "</span> <span class="o">+</span> <span class="n">offspring_phenotype</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Offspring genotype: AaAaBbBb
+Offspring phenotype: unknown
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
 </div>
 
 
