@@ -160,43 +160,16 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">DecimalToBinary</span><span class="p">(</span><span class="nb">input</span><span class="p">):</span>
-    <span class="k">if</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="nb">input</span> <span class="o">&lt;=</span> <span class="mi">255</span><span class="p">:</span>
-        <span class="k">pass</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">)</span> <span class="o">+</span> <span class="s2">"Intentional Error to Restart Loop"</span><span class="p">)</span>
-    <span class="n">i</span> <span class="o">=</span> <span class="mi">7</span>
-    <span class="n">binary</span> <span class="o">=</span> <span class="s2">""</span>
-    <span class="k">while</span> <span class="n">i</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="k">if</span> <span class="nb">input</span> <span class="o">%</span> <span class="p">(</span><span class="mi">2</span><span class="o">**</span><span class="n">i</span><span class="p">)</span> <span class="o">==</span> <span class="nb">input</span><span class="p">:</span>
-            <span class="n">binary</span> <span class="o">+=</span> <span class="s2">"0"</span>
-            <span class="n">i</span> <span class="o">-=</span> <span class="mi">1</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="n">binary</span> <span class="o">+=</span> <span class="s2">"1"</span>
-            <span class="nb">input</span> <span class="o">-=</span> <span class="mi">2</span><span class="o">**</span><span class="n">i</span>
-            <span class="n">i</span> <span class="o">-=</span> <span class="mi">1</span>
-    <span class="k">return</span> <span class="n">binary</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">DecimalToBinary</span><span class="p">(</span><span class="n">number</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">number</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">DecimalToBinary</span><span class="p">(</span><span class="n">number</span><span class="o">//</span><span class="mi">2</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">number</span><span class="o">%</span><span class="k">2</span>, end = "")
  
 <span class="c1"># function to reverse the string</span>
-<span class="k">def</span> <span class="nf">reverse</span><span class="p">(</span><span class="n">strs</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">strs</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
- 
+<span class="n">number</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span> 
+<span class="nb">print</span><span class="p">(</span><span class="s2">"The binary for"</span><span class="p">,</span> <span class="n">number</span><span class="p">,</span> <span class="s2">"is: "</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="s2">""</span><span class="p">)</span>
+<span class="n">DecimalToBinary</span><span class="p">(</span><span class="n">number</span><span class="p">)</span>
 <span class="c1"># Driver Code</span>
-<span class="n">num</span> <span class="o">=</span> <span class="mi">67</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"The reverse of 67 in binary is:"</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">" "</span><span class="p">)</span>
-<span class="n">reverse</span><span class="p">(</span><span class="n">DecimalToBinary</span><span class="p">(</span><span class="n">num</span><span class="p">))</span>
-
-<span class="c1"># input box</span>
-<span class="k">def</span> <span class="nf">getUserInput</span><span class="p">():</span>
-    <span class="k">try</span><span class="p">:</span>
-        <span class="n">userinp</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">"Input an integer between 0 and 255."</span><span class="p">))</span>
-        <span class="n">userbin</span> <span class="o">=</span> <span class="n">DecimalToBinary</span><span class="p">(</span><span class="n">userinp</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">'"'</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">userinp</span><span class="p">)</span> <span class="o">+</span> <span class="s1">'" in binary is "'</span> <span class="o">+</span> <span class="n">userbin</span> <span class="o">+</span> <span class="s1">'".'</span><span class="p">)</span>
-    <span class="k">except</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">"Invalid input."</span><span class="p">)</span>
-        <span class="n">getUserInput</span><span class="p">()</span>
-
-<span class="n">getUserInput</span><span class="p">()</span>
 </pre></div>
 
     </div>
@@ -209,9 +182,7 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>The reverse of 67 in binary is: 11000010
-"13" in binary is "00001101".
-</pre>
+<pre>The binary for 30 is: 11110</pre>
 </div>
 </div>
 
