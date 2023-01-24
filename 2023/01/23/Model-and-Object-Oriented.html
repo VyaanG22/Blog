@@ -10,15 +10,15 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
 <meta property="og:description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
-<link rel="canonical" href="https://vyaang22.github.io/Blog/2023/01/10/Model-and-Object-Oriented.html" />
-<meta property="og:url" content="https://vyaang22.github.io/Blog/2023/01/10/Model-and-Object-Oriented.html" />
+<link rel="canonical" href="https://vyaang22.github.io/Blog/2023/01/23/Model-and-Object-Oriented.html" />
+<meta property="og:url" content="https://vyaang22.github.io/Blog/2023/01/23/Model-and-Object-Oriented.html" />
 <meta property="og:site_name" content="fastpages" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2023-01-10T00:00:00-06:00" />
+<meta property="article:published_time" content="2023-01-23T00:00:00-06:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Model and Object-Oriented Program" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-01-10T00:00:00-06:00","datePublished":"2023-01-10T00:00:00-06:00","description":"An easy to use blogging platform with support for Jupyter Notebooks.","headline":"Model and Object-Oriented Program","mainEntityOfPage":{"@type":"WebPage","@id":"https://vyaang22.github.io/Blog/2023/01/10/Model-and-Object-Oriented.html"},"url":"https://vyaang22.github.io/Blog/2023/01/10/Model-and-Object-Oriented.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-01-23T00:00:00-06:00","datePublished":"2023-01-23T00:00:00-06:00","description":"An easy to use blogging platform with support for Jupyter Notebooks.","headline":"Model and Object-Oriented Program","mainEntityOfPage":{"@type":"WebPage","@id":"https://vyaang22.github.io/Blog/2023/01/23/Model-and-Object-Oriented.html"},"url":"https://vyaang22.github.io/Blog/2023/01/23/Model-and-Object-Oriented.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/Blog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://vyaang22.github.io/Blog/feed.xml" title="fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/Blog/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -73,13 +73,13 @@ window.onload = wrap_img;
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">Model and Object-Oriented Program</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2023-01-10T00:00:00-06:00" itemprop="datePublished">
-        Jan 10, 2023
+    <h1 class="post-title p-name" itemprop="name headline">Model and Object-Oriented Program</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2023-01-23T00:00:00-06:00" itemprop="datePublished">
+        Jan 23, 2023
       </time>
        • <span class="read-time" title="Estimated read time">
     
     
-      1 min read
+      2 min read
     
 </span></p>
 
@@ -207,11 +207,31 @@ Age: 15
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>import datetime : This line is importing the datetime module. This module provides classes for manipulating dates and times.</p>
+<p>class Student: : This line is defining the start of the class. The class is called "Student".</p>
+<p>def <strong>init</strong>(self, fname, lname, idNum, classOf, dob): : This is the constructor method for the class. It gets called when an object of the class is created. It takes five parameters: "fname", "lname", "idNum", "classOf" and "dob" which are all assigned to the object's corresponding instance variables.</p>
+<p>self._age = None: This line creates an instance variable "_age" and assigns a value of None to it.</p>
+<p>@property : This is a Python decorator, which can be added above a method to indicate that it should be treated as a property. For example, it allows you to access the method like an attribute without calling it like a function.</p>
+<p>def classOf(self): : This is a getter method for the classOf property. It simply returns the value of the instance variable "_classOf".</p>
+<p>@classOf.setter : This is another decorator that specifies that the following method is a setter method for the classOf property.</p>
+<p>def classOf(self, value): : This is the setter method for the classOf property. It takes one parameter, "value", which it assigns to the instance variable "_classOf".</p>
+<p>def dob(self): : This is a getter method for the dob property. It simply returns the value of the instance variable "_dob".</p>
+<p>def dob(self, value): : This is the setter method for the dob property. It takes one parameter, "value", which it assigns to the instance variable "_dob". It also calculates the age of the student using today's date and assigns the result to the instance variable "_age".</p>
+<p>def age(self): : This is a getter method for the age property. It simply returns the value of the instance variable "_age".</p>
+<p>def <strong>str</strong>(self): : This is a special method that defines how the class should be represented as a string. It returns a formatted string that includes the student's name, ID number, graduation year, DOB, and age.</p>
+<p>def tester(): : This is a simple test function that creates an instance of the Student class and prints it out, then modifies its birthdate and prints it out again</p>
+<p>tester() : This is calling the tester function and run the test case</p>
+
+</div>
+</div>
+</div>
 </div>
 
 
 
-  </div><a class="u-url" href="/Blog/2023/01/10/Model-and-Object-Oriented.html" hidden></a>
+  </div><a class="u-url" href="/Blog/2023/01/23/Model-and-Object-Oriented.html" hidden></a>
 </article>
 
       </div>
