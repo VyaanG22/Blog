@@ -758,6 +758,34 @@ Scaled size:  (320, 240)
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="/Blog/images/copied_from_nb/../images/2f23e124f6b68a2f1d18197b61a435a4e66dffa963f1aae4a88eb87dfe825b91.png" alt="picture 4"></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="../images/3abbabad280872ac172019b68c15ae99a699331f73c6777bfa811ceb8e020f4f.png" alt="picture 5"></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="/Blog/images/copied_from_nb/../images/37d4cfccca1a922524497a546c4266befddb9b12c53e137ac5521fcab059ad17.png" alt="picture 6"></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="/Blog/images/copied_from_nb/../images/bc2bd21daeeb42b2ff911061ccc3e665e5c5b60f0ca981e4c03580e51e1e98e5.png" alt="picture 7"></p>
+
+</div>
+</div>
+</div>
 </div>
  
 
